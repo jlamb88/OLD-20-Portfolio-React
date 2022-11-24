@@ -1,0 +1,23 @@
+import React, { useEffect, useState } from 'react'
+import ArrowUpIcon from '@material-ui/icons/ArrowUpward'
+import './ScrollBar.css'
+
+const ScrollBar = () => {
+    const [isVisible, setIsVisible] = useState(false)
+
+
+    useEffect(() => {
+        const toggleVisible = () =>
+            window.pageYOffset > 500 ? setIsVisible(true) : setIsVisible(false)
+        window.addEventListener('scroll', toggleVisible)
+        return () => window.removeEventListener('scroll', toggleVisible)
+    })
+
+    return isVisible ? (
+        <div className= 'scroll-top' >
+        <a href='#top'>
+            <ArrowUpIcon fontsize='large' />
+        </a>
+        </div>
+    ) : null
+}

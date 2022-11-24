@@ -1,0 +1,23 @@
+import uuid from './utils'
+import './Skills.css'
+
+skills = ['Javascript', 'CSS', 'HTML', 'React', 'MySql', 'Sequelize', 'MongoDb', 'Mongoose', 'Inquirer', 'CLI', 'Express', 'Node']
+
+const Skills = () => {
+    return (
+        <section className= 'section skills' id = 'skills' >
+            <h2 className='section title' > Skills < /h2>
+                < ul className = 'skills list' >
+                {
+                    skills.map((skill) => (
+                        <li key= { uuid } className = 'skills list-item btn btn-plain' >
+                        { skill }
+                        < /li>
+                    )
+                )}
+</ul>
+    < /section>
+    )
+}
+
+export default Skills

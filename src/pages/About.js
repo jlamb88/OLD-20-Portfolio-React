@@ -1,20 +1,30 @@
 import React from 'react'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
 
 
-const Home = () => {
+
+const About = () => {
 
   return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          ABOUT
-        </div>
-      </div>
-    </main>
-  );
-};
+    <div className='about center'>
+      <h1>Hi, I am Joseph Lamb and I am a full stack developer</h1>
 
-export default Home;
+
+      <div className='about-contact center'>
+        <a href='resume link'>
+          <span type='button' className='btn btn-outline'> Resume </span>
+        </a>
+
+        <a href="https://github.io/jlamb88" aria-label='github' className='link link-icon'>
+          <GitHubIcon />
+        </a>
+
+        <a href="linkedIN" aria-label="linkedin" className='link link-icon'>
+          <LinkedInIcon />
+        </a>
+      </div>
+    </div>
+  )
+}
+export default About;

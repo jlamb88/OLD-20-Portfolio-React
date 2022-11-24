@@ -1,19 +1,22 @@
 import React from 'react';
+import uniqid from 'uniqid'
+import projectContainer from '../components/Projects/index/index'
+import './Projects.css'
 
-const Home = () => {
+projects = ['Fore-some - Golf Planner', 'Weather Now', 'Coding Quiz']
+
+const Work = () => {
 
   return (
-    <main>
-      <div className="flex-row justify-center">
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          WORK
-        </div>
+    <section id='projects' className='section projects'>
+      <h2 className='section-title'> Projects</h2>
+      <div className='projects-grid'>
+        {projects.map((project) => (
+          <projectContainer key={uniqid} project={project} />
+        ))}
       </div>
-    </main>
+    </section >
   );
 };
 
-export default Home;
+export default Work;
